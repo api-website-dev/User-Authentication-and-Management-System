@@ -19,6 +19,10 @@ app.use(bodyParser.json())
 // Route Middleware
 app.use('/api/users', useRoute);
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the User Authentication and Management System API');
+});
+
 // Error-handling middleware should come after all routes
 app.use(errorHandler);
 // Connect to db
