@@ -14,12 +14,7 @@ const app = express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(express.urlencoded({extended:false}))
-app.use(bodyParser.json())
-
-// Routes
-app.get("/", (req,res) =>{
-    res.send("Home Page");
-}); 
+app.use(bodyParser.json()) 
 
 // Route Middleware
 app.use('/api/users', useRoute);
